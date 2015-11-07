@@ -13,6 +13,7 @@
 		0D6B91E81BEE5DAD00456D16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B91E71BEE5DAD00456D16 /* Images.xcassets */; };
 		0D6B91EB1BEE5DAD00456D16 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B91E91BEE5DAD00456D16 /* LaunchScreen.xib */; };
 		0D6B91F71BEE5DAD00456D16 /* JetBlue_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B91F61BEE5DAD00456D16 /* JetBlue_AppTests.swift */; };
+		0D9154EA1BEE704E00BA217B /* PodBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9154E91BEE704E00BA217B /* PodBridgingHeader.m */; };
 		BCF8B101D791ACB025C5FCC2 /* Pods_JetBlue_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26490B05C4FFE34C83849983 /* Pods_JetBlue_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,8 @@
 		0D6B91F01BEE5DAD00456D16 /* JetBlue AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JetBlue AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6B91F51BEE5DAD00456D16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D6B91F61BEE5DAD00456D16 /* JetBlue_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetBlue_AppTests.swift; sourceTree = "<group>"; };
+		0D9154E81BEE704E00BA217B /* JetBlue App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JetBlue App-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D9154E91BEE704E00BA217B /* PodBridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodBridgingHeader.m; sourceTree = "<group>"; };
 		110CCB12637E5F32BC2B2BEE /* Pods-JetBlue App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetBlue App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JetBlue App/Pods-JetBlue App.debug.xcconfig"; sourceTree = "<group>"; };
 		26490B05C4FFE34C83849983 /* Pods_JetBlue_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetBlue_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83BFDBAA005260160A324DC /* Pods-JetBlue App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetBlue App.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetBlue App/Pods-JetBlue App.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,10 +89,12 @@
 			children = (
 				0D6B91E01BEE5DAD00456D16 /* AppDelegate.swift */,
 				0D6B91E21BEE5DAD00456D16 /* ViewController.swift */,
+				0D9154E91BEE704E00BA217B /* PodBridgingHeader.m */,
 				0D6B91E41BEE5DAD00456D16 /* Main.storyboard */,
 				0D6B91E71BEE5DAD00456D16 /* Images.xcassets */,
 				0D6B91E91BEE5DAD00456D16 /* LaunchScreen.xib */,
 				0D6B91DE1BEE5DAD00456D16 /* Supporting Files */,
+				0D9154E81BEE704E00BA217B /* JetBlue App-Bridging-Header.h */,
 			);
 			path = "JetBlue App";
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9154EA1BEE704E00BA217B /* PodBridgingHeader.m in Sources */,
 				0D6B91E31BEE5DAD00456D16 /* ViewController.swift in Sources */,
 				0D6B91E11BEE5DAD00456D16 /* AppDelegate.swift in Sources */,
 			);
@@ -412,9 +418,12 @@
 			baseConfigurationReference = 110CCB12637E5F32BC2B2BEE /* Pods-JetBlue App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "JetBlue App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JetBlue App/JetBlue App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -423,9 +432,11 @@
 			baseConfigurationReference = F83BFDBAA005260160A324DC /* Pods-JetBlue App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "JetBlue App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JetBlue App/JetBlue App-Bridging-Header.h";
 			};
 			name = Release;
 		};
