@@ -1,4 +1,4 @@
-# Priceline Bling
+# Jetline Bling 
 ### Server
 Node.js backend with Express framework to expose a Mongo database in a RESTful manner.  
 
