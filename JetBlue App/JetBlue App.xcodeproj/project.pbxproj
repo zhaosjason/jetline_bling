@@ -13,6 +13,7 @@
 		0D6B91E81BEE5DAD00456D16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B91E71BEE5DAD00456D16 /* Images.xcassets */; };
 		0D6B91EB1BEE5DAD00456D16 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B91E91BEE5DAD00456D16 /* LaunchScreen.xib */; };
 		0D6B91F71BEE5DAD00456D16 /* JetBlue_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B91F61BEE5DAD00456D16 /* JetBlue_AppTests.swift */; };
+		BCF8B101D791ACB025C5FCC2 /* Pods_JetBlue_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26490B05C4FFE34C83849983 /* Pods_JetBlue_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		0D6B91F01BEE5DAD00456D16 /* JetBlue AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JetBlue AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6B91F51BEE5DAD00456D16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D6B91F61BEE5DAD00456D16 /* JetBlue_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetBlue_AppTests.swift; sourceTree = "<group>"; };
+		110CCB12637E5F32BC2B2BEE /* Pods-JetBlue App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetBlue App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JetBlue App/Pods-JetBlue App.debug.xcconfig"; sourceTree = "<group>"; };
+		26490B05C4FFE34C83849983 /* Pods_JetBlue_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetBlue_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F83BFDBAA005260160A324DC /* Pods-JetBlue App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetBlue App.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetBlue App/Pods-JetBlue App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF8B101D791ACB025C5FCC2 /* Pods_JetBlue_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 				0D6B91DD1BEE5DAD00456D16 /* JetBlue App */,
 				0D6B91F31BEE5DAD00456D16 /* JetBlue AppTests */,
 				0D6B91DC1BEE5DAD00456D16 /* Products */,
+				1175EEB08498F21AAB20539B /* Pods */,
+				8662FFBAE11A5CC8E56A084D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +119,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1175EEB08498F21AAB20539B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				110CCB12637E5F32BC2B2BEE /* Pods-JetBlue App.debug.xcconfig */,
+				F83BFDBAA005260160A324DC /* Pods-JetBlue App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8662FFBAE11A5CC8E56A084D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26490B05C4FFE34C83849983 /* Pods_JetBlue_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D6B91FA1BEE5DAD00456D16 /* Build configuration list for PBXNativeTarget "JetBlue App" */;
 			buildPhases = (
+				1E56256C8AF51741340F0A88 /* Check Pods Manifest.lock */,
 				0D6B91D71BEE5DAD00456D16 /* Sources */,
 				0D6B91D81BEE5DAD00456D16 /* Frameworks */,
 				0D6B91D91BEE5DAD00456D16 /* Resources */,
+				042EF9EE087D460AD7185631 /* Embed Pods Frameworks */,
+				E3E4BB5E33F328CC5A8C117F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		042EF9EE087D460AD7185631 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetBlue App/Pods-JetBlue App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E56256C8AF51741340F0A88 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3E4BB5E33F328CC5A8C117F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetBlue App/Pods-JetBlue App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0D6B91D71BEE5DAD00456D16 /* Sources */ = {
@@ -334,6 +409,7 @@
 		};
 		0D6B91FB1BEE5DAD00456D16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 110CCB12637E5F32BC2B2BEE /* Pods-JetBlue App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "JetBlue App/Info.plist";
@@ -344,6 +420,7 @@
 		};
 		0D6B91FC1BEE5DAD00456D16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F83BFDBAA005260160A324DC /* Pods-JetBlue App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "JetBlue App/Info.plist";
@@ -405,6 +482,7 @@
 				0D6B91FC1BEE5DAD00456D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D6B91FD1BEE5DAD00456D16 /* Build configuration list for PBXNativeTarget "JetBlue AppTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +491,7 @@
 				0D6B91FF1BEE5DAD00456D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
