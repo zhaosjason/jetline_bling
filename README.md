@@ -10,6 +10,8 @@ mongoimport -d mongodb -c getaways --type csv --file [path_to_csv] --headerline
 node index.js
 ```
 
+Express and Mongo help from: http://www.raywenderlich.com/61078/write-simple-node-jsmongodb-web-service-ios-app
+
 ### iOS App
 
 
