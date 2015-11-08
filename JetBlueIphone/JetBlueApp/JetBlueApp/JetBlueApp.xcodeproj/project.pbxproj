@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D77D1091BEF347200AE518F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		0DF3B4CE1BEF153000E7204E /* JetBlueApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetBlueApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF3B4D21BEF153000E7204E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DF3B4D31BEF153000E7204E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		0DF3B4D01BEF153000E7204E /* JetBlueApp */ = {
 			isa = PBXGroup;
 			children = (
+				0D77D1091BEF347200AE518F /* Bridging-Header.h */,
 				0DF3B5051BEF219C00E7204E /* SwipesViewController.swift */,
 				0DF3B5011BEF1EAB00E7204E /* DraggableViewBackground.swift */,
 				0DF3B4D31BEF153000E7204E /* AppDelegate.swift */,
@@ -439,6 +441,7 @@
 				0DF3B4EF1BEF153000E7204E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DF3B4F01BEF153000E7204E /* Build configuration list for PBXNativeTarget "JetBlueAppTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +450,7 @@
 				0DF3B4F21BEF153000E7204E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
