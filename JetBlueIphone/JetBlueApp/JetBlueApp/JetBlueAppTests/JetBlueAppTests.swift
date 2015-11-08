@@ -1,15 +1,15 @@
 //
-//  JetBlueTinderTests.swift
-//  JetBlueTinderTests
+//  JetBlueAppTests.swift
+//  JetBlueAppTests
 //
-//  Created by Cameron Averill on 11/7/15.
+//  Created by Cameron Averill on 11/8/15.
 //  Copyright (c) 2015 Cameron Averill. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class JetBlueTinderTests: XCTestCase {
+class JetBlueAppTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

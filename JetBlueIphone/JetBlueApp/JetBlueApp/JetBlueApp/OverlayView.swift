@@ -3,7 +3,8 @@
 //  TinderSwipeCardsSwift
 //
 //  Created by Gao Chao on 4/30/15.
-//  Copyright (c) 2015 gcweb. All rights reserved.
+
+// Modified by Cameron Averill 11/8/15 
 //
 
 import Foundation

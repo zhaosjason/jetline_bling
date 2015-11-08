@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>658DE95A-6AB8-44C0-9882-7DA896E8992B</string>
+	<string>35C4BEE4-9561-479E-9D4D-E81D59097192</string>
 	<key>IDESourceControlProjectName</key>
-	<string>JetBlueTinder</string>
+	<string>JetBlueApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D740C70022828FBDD679312A82A982007C516D1F</key>
 		<string>github.com:zhaosjason/jetline_bling.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JetBlueIphone/JetBlueApp/JetBlueTinder/JetBlueTinder.xcodeproj</string>
+	<string>JetBlueIphone/JetBlueApp/JetBlueApp/JetBlueApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D740C70022828FBDD679312A82A982007C516D1F</key>

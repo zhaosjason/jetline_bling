@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>JetBlueTinder.xcscheme</key>
+		<key>JetBlueApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0D91554F1BEEA79B00BA217B</key>
+		<key>0DF3B4CD1BEF153000E7204E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0D9155641BEEA79B00BA217B</key>
+		<key>0DF3B4E21BEF153000E7204E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

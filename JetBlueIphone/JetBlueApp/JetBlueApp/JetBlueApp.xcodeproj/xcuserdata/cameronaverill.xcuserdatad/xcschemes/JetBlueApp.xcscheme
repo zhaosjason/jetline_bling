@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0D91554F1BEEA79B00BA217B"
-               BuildableName = "JetBlueTinder.app"
-               BlueprintName = "JetBlueTinder"
-               ReferencedContainer = "container:JetBlueTinder.xcodeproj">
+               BlueprintIdentifier = "0DF3B4CD1BEF153000E7204E"
+               BuildableName = "JetBlueApp.app"
+               BlueprintName = "JetBlueApp"
+               ReferencedContainer = "container:JetBlueApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0D9155641BEEA79B00BA217B"
-               BuildableName = "JetBlueTinderTests.xctest"
-               BlueprintName = "JetBlueTinderTests"
-               ReferencedContainer = "container:JetBlueTinder.xcodeproj">
+               BlueprintIdentifier = "0DF3B4E21BEF153000E7204E"
+               BuildableName = "JetBlueAppTests.xctest"
+               BlueprintName = "JetBlueAppTests"
+               ReferencedContainer = "container:JetBlueApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0D9155641BEEA79B00BA217B"
-               BuildableName = "JetBlueTinderTests.xctest"
-               BlueprintName = "JetBlueTinderTests"
-               ReferencedContainer = "container:JetBlueTinder.xcodeproj">
+               BlueprintIdentifier = "0DF3B4E21BEF153000E7204E"
+               BuildableName = "JetBlueAppTests.xctest"
+               BlueprintName = "JetBlueAppTests"
+               ReferencedContainer = "container:JetBlueApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0D91554F1BEEA79B00BA217B"
-            BuildableName = "JetBlueTinder.app"
-            BlueprintName = "JetBlueTinder"
-            ReferencedContainer = "container:JetBlueTinder.xcodeproj">
+            BlueprintIdentifier = "0DF3B4CD1BEF153000E7204E"
+            BuildableName = "JetBlueApp.app"
+            BlueprintName = "JetBlueApp"
+            ReferencedContainer = "container:JetBlueApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0D91554F1BEEA79B00BA217B"
-            BuildableName = "JetBlueTinder.app"
-            BlueprintName = "JetBlueTinder"
-            ReferencedContainer = "container:JetBlueTinder.xcodeproj">
+            BlueprintIdentifier = "0DF3B4CD1BEF153000E7204E"
+            BuildableName = "JetBlueApp.app"
+            BlueprintName = "JetBlueApp"
+            ReferencedContainer = "container:JetBlueApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0D91554F1BEEA79B00BA217B"
-            BuildableName = "JetBlueTinder.app"
-            BlueprintName = "JetBlueTinder"
-            ReferencedContainer = "container:JetBlueTinder.xcodeproj">
+            BlueprintIdentifier = "0DF3B4CD1BEF153000E7204E"
+            BuildableName = "JetBlueApp.app"
+            BlueprintName = "JetBlueApp"
+            ReferencedContainer = "container:JetBlueApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
