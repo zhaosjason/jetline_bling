@@ -1,0 +1,3 @@
+send put request everytime someone logs in 
+input their entire list in http body
+/users/fbidthing/

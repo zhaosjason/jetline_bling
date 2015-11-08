@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>35C4BEE4-9561-479E-9D4D-E81D59097192</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JetBlueApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D740C70022828FBDD679312A82A982007C516D1F</key>
+		<string>github.com:zhaosjason/jetline_bling.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JetBlueIphone/JetBlueApp/JetBlueApp/JetBlueApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D740C70022828FBDD679312A82A982007C516D1F</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:zhaosjason/jetline_bling.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D740C70022828FBDD679312A82A982007C516D1F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D740C70022828FBDD679312A82A982007C516D1F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>jetline_bling</string>
+		</dict>
+	</array>
+</dict>
+</plist>
