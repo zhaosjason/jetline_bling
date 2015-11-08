@@ -25,10 +25,10 @@ mongoClient.open(function(err, mongoClient) {
 	collectionDriver = new CollectionDriver(db); 
 });
  
-/**
- *  Routes
- */
-app.get('/:collection', function(req, res) { // GET entire database
+/***************** Routes Begin *****************/
+
+// Get entire database *dev purposes only*
+app.get('/:collection', function(req, res) {
 	var params = req.params;
 	collectionDriver.findAll(req.params.collection, function(error, objs) {
 		if (error) { res.send(400, error); }
@@ -42,22 +42,37 @@ app.get('/:collection', function(req, res) { // GET entire database
 		}
 	});
 });
- 
-app.get('/:collection/:entity/', function(req, res) { // GET more cards
+
+/** 
+ *	Get more cards (returns 15 at a time)
+ *	HTTP Request: GET /getaways/[fbid]/[airport code]
+ */
+app.get('/:collection/:entity/:loc', function(req, res) {
 	var params = req.params;
+	var loc = params.loc;
 	var entity = params.entity;
 	var collection = params.collection;
 	if (entity) {
-		collectionDriver.get(collection, entity, function(error, objs) {
+		collectionDriver.get(collection, loc, entity, function(error, objs) {
 			if (error) { res.send(400, error); }
-			else { res.send(200, objs); }
+			else { 
+				collectionDriver.crossref("users", objs, entity, function(error, objs) {
+					if (error) { res.send(400, error); }
+					else { res.send(200, objs); }
+				});
+			}
 		});
 	} else {
 		res.send(400, {error: 'bad url', url: req.url});
 	}
 });
 
-app.post('/:collection/:entity', function(req, res) { // POST liked trips
+/** 
+ *	Send liked trips to server
+ *	HTTP Request: POST /users/[fbid]
+ *	HTTP Body:    { "_id": "[trip id]" }
+ */
+app.post('/:collection/:entity', function(req, res) {
 	var params = req.params;
 	var collection = params.collection;
 	var entity = params.entity;
@@ -67,7 +82,12 @@ app.post('/:collection/:entity', function(req, res) { // POST liked trips
 	});
 });
 
-app.put('/:collection/:entity', function(req, res) { // PUT updated location and friend list
+/** 
+ *	Update friends list every time a user connects
+ *	HTTP Request: PUT /users/[fbid]
+ *	HTTP Body:    { "friends": [{"fbid":"[fbid]"},...] }
+ */
+app.put('/:collection/:entity', function(req, res) { 
 	var params = req.params;
 	var collection = params.collection;
 	var entity = params.entity;
@@ -76,9 +96,8 @@ app.put('/:collection/:entity', function(req, res) { // PUT updated location and
 		else { res.send(200, objs); } 
 	});
 });
-/**
- *  End routes
- */
+
+/****************** Routes End ******************/
  
 http.createServer(app).listen(app.get('port'), function(){
 	console.log('Express server listening on port ' + app.get('port'));

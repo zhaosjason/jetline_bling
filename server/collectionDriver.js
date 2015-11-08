@@ -1,4 +1,5 @@
 var ObjectID = require('mongodb').ObjectID;
+var db;
 
 CollectionDriver = function(db) {
 	this.db = db;
@@ -11,35 +12,58 @@ CollectionDriver.prototype.getCollection = function(collectionName, callback) {
 	});
 };
 
-
+// For dev testing purposes only
 CollectionDriver.prototype.findAll = function(collectionName, callback) {
 	this.getCollection(collectionName, function(error, the_collection) {
 	  if( error ) callback(error);
 	  else {
 		the_collection.find().toArray(function(error, results) {
-		  if( error ) callback(error);
-		  else callback(null, results);
+			if( error ) callback(error);
+			else callback(null, results);
 		});
 	  }
 	});
 };
 
-CollectionDriver.prototype.get = function(collectionName, cmd, q, callback) {
+// Get more cards
+CollectionDriver.prototype.get = function(collectionName, loc, entityId, callback) {
 	this.getCollection(collectionName, function(error, the_collection) {
 		if (error) callback(error);
 		else {
-			if(cmd == 'loc'){
-				the_collection.distinct('Hotel Property', {'Origin':q}, function(error,doc) {
-					if (error) callback(error);
-					else callback(null, doc);
+			var findProjection = {"Destination": false, "Hotel Check Out Date": false, "Origin": false,
+				"Expedia Package Price/Person": false, "Month": false, "Advance_weeks": false};
+			the_collection.find({Origin: loc}, findProjection).toArray(function(error, doc) {
+				if (error) callback(error);
+				else{ callback(null, doc); } 
+			});
+		}
+	});
+};
+
+// Find all friends, check to see if they are have liked any of your spots
+CollectionDriver.prototype.crossref = function(collectionName, doc, entityId, callback){
+	this.getCollection(collectionName, function(error, the_collection) {
+		if (error) callback(error);
+		else {
+			console.log("begin...");
+			var fbids = the_collection.find({"fbid": entityId})[0].friends.map(function(user){
+				return user.fbid;
+			});
+
+			console.log(fbids);
+
+			the_collection.find({fbid: {$in: fbids}}).forEach(function(user){
+				doc.forEach(function(trip){
+					user[0].likes.forEach(function(like){
+						if(trip._id == like){
+							trip.count = trip.count + 1;
+						}
+					});
 				});
-			}
-			else if(cmd == 'friends'){
-				the_collection.find({},{'Location':q}).toArray(function(error,doc) {
-					if (error) callback(error);
-					else callback(null, doc);
-				});
-			}
+			});
+
+			doc.sort({ "count": -1, "% Savings (Compared to Expedia)": -1 })
+			callback(null, doc);
 		}
 	});
 };
@@ -49,7 +73,7 @@ CollectionDriver.prototype.save = function(collectionName, obj, entityId, callba
 	this.getCollection(collectionName, function(error, the_collection) { 
 		if (error) callback(error);
 		else {
-			the_collection.update(fbid:'entityId', {$push: {likes: obj._id}}, function() { 
+			the_collection.update({fbid: entityId}, {$push: {likes: obj._id}}, function() { 
 				callback(null, obj);
 			});
 		}
@@ -61,26 +85,12 @@ CollectionDriver.prototype.update = function(collectionName, obj, entityId, call
 	this.getCollection(collectionName, function(error, the_collection) {
 		if (error) callback(error);
 		else {
-			the_collection.update({fbid: entityId}, {$set: {friends: obj.friends}}, function(error,doc) {
+			the_collection.update({fbid: entityId}, {$set: {friends: JSON.parse(obj.friends)}}, function(error,doc) {
 				if (error) callback(error);
 				else callback(null, obj);
 			});
 		}
 	});
 };
-
-//delete a specific object
-/*
-CollectionDriver.prototype.delete = function(collectionName, entityId, callback) {
-	this.getCollection(collectionName, function(error, the_collection) { //A
-		if (error) callback(error);
-		else {
-			the_collection.remove({'_id':ObjectID(entityId)}, function(error,doc) { //B
-				if (error) callback(error);
-				else callback(null, doc);
-			});
-		}
-	});
-};*/
 
 exports.CollectionDriver = CollectionDriver;
