@@ -1,4 +1,6 @@
 # Jetline Bling 
+Made at YHacks 2015 as part of JetBlue's Flight Data Challenge.
+
 ### Server
 Node.js backend with Express framework to expose a Mongo database in a RESTful manner.  
 
@@ -13,5 +15,5 @@ node index.js
 Express and Mongo help from: http://www.raywenderlich.com/61078/write-simple-node-jsmongodb-web-service-ios-app
 
 ### iOS App
-
+@cameronaverill
 
